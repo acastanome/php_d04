@@ -7,7 +7,7 @@ $folder = "../private";
 $file_path = "../private/passwd";
 $found = FALSE;
 
-if ($this_login && $this_passwd && $new_passwd && $submit_state && ($submit_state === "OK") && (!file_exists($file_path)))
+if ($this_login && $this_passwd && $new_passwd && $submit_state && ($submit_state === "OK") && (file_exists($file_path)))
 {
 $file_contents = unserialize(file_get_contents($file_path));
 foreach ($file_contents as $key => $value)
